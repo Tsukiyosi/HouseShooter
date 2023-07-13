@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private int healthPoints = 100;
-    private int collectedCoins = 0;
+    private float healthPoints = 100;
+    private float collectedCoins = 0;
 
-    public int HP{
+    public float HP{
         get {return healthPoints;}
         set {healthPoints = value;}
     }
 
-    public int CollectedCoins{
+    public float CollectedCoins{
         get {return collectedCoins;}
         set {collectedCoins = value;}
     }
@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (HP <= 0){
+        if (HP <= 0f){
             Destroy(this);
         }
     }
